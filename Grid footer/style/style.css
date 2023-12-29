@@ -1,0 +1,89 @@
+* {
+  top: 0;
+}
+body {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: antiquewhite;
+  background-color: transparent;
+}
+a:hover {
+  color: lawngreen;
+  background-color: darkgrey;
+  padding: 10px 100px 10px 5px;
+  width: 50px;
+  opacity: 0.9;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  font-size: 20px;
+  text-align: left;
+}
+header {
+  font-weight: bold;
+}
+.grid1,.grid2,.grid3,.grid4,.grid5: hover {
+  -ms-transform: scale(1.5);
+}
+.btn {
+  text-align: center;
+  font-size: 16px;
+  opacity: 1;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: aqua;
+  opacity: 0.6;
+}
+.grid1 {
+  padding: 125px;
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  background: #fb896b;
+
+  color: white;
+}
+.grid2 {
+  padding: 125px;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+  color: white;
+
+  background-color: #fb6b6c;
+}
+.grid3 {
+  padding: 125px;
+
+  color: white;
+
+  grid-column-start: 3;
+  grid-column-end: 5;
+  background-color: #f1a863;
+}
+.grid4 {
+  padding: 125px;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-color: #fbd36a;
+}
+.grid5 {
+  padding: 125px;
+
+  background-repeat: no-repeat;
+  mix-blend-mode: lighten;
+
+  background-color: #475257;
+  color: white;
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+button {
+  padding: 20px;
+  border-radius: 100px;
+}
