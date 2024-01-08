@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=pie, initial-scale=1.0" />
+    <title>piechart | analytics</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1>Visitors per Day</h1>
+      </div>
+      <div class="donut">
+      <canvas id="myChart" style="width: 100%; max-width: 600px"></canvas>
+      <script>
+        var xValues = [
+          "Morbi lingua",
+          "scientific",
+          "rate",
+          "returning",
+          "disapproved",
+        ];
+        var yValues = [41, 29, 23, 4, 3];
+        var barColors = ["#b91d47", "#00aba9", "#2b5797", "#e8c3b9", "#1e7145"];
+
+        new Chart("myChart", {
+          type: "doughnut",
+          data: {
+            labels: xValues,
+            datasets: [
+              {
+                backgroundColor: barColors,
+                data: yValues,
+              },
+            ],
+          },
+          options: {
+            title: {
+              display: true,
+              text: "World Wide Wine Production 2018",
+            },
+          },
+        });
+      </script>
+    </div>
+  </body>
+</html>
