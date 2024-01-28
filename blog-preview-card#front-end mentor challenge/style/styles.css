@@ -1,0 +1,42 @@
+* {
+  font-family:https://fonts.google.com/specimen/Figtree;
+ font-Weight: 600, 800;
+   
+}
+
+body {
+  background-color: hsl(47, 88%, 63%);
+}
+span {
+  padding: 10px 10px 10px 10px;
+  border-radius: 5px;
+  background-color: hsl(47, 88%, 63%);
+}
+header {
+    font-size: 30px;
+}
+.card,img{
+    align-items: center;
+    border-radius: 20%;
+}
+.card {
+    height: 800px;
+    width: 500px;
+  margin: 100px 500px 100px 500px;
+  padding: 0px 40px 0px 40px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 5px 10px hsl(0, 0%, 7%);
+  background-color: hsl(0, 0%, 100%);
+}
+p {
+  color: hsl(0, 0%, 50%);
+  font-size: 16px;
+}
+
+h2 {
+  text-align: center;
+}
+.avatar{
+  padding-left: 200px;
+}
