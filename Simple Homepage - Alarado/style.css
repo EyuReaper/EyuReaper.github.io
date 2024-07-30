@@ -1,0 +1,238 @@
+/* Global Styles */
+:root {
+  --primary-color: #f2f9fe;
+  --secondary-color: #2a4dd0;
+  --text-color: #223344;
+  --background-color: #f2f9fe;
+  --dark-text-color: #ffffff;
+  --dark-background-color: #111729;
+}
+
+body {
+  src: url(https://fonts.google.com/specimen/Poppins);
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  transition: background-color 0.3s, color 0.3s;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body.dark-mode {
+  color: var(--dark-text-color);
+  background-color: var(--dark-background-color);
+}
+
+/* Header Styles */
+header {
+  /*todo: fix the header to look like the body*/
+  background-color: var(--primary-color);
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+header.dark-mode {
+  color: var(--dark-text-color);
+  background-color: var(--dark-background-color);
+}
+
+.navbar.dark-mode {
+  color: var(--primary-color);
+  background-color: var(--dark-background-color);
+}
+.emoji {
+  position: inherit;
+  width: 20px;
+  height: 100%;
+  margin-right: 10px;
+}
+h1 {
+  src: url(https://fonts.google.com/specimen/Poppins);
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+.active {
+  color: var(--text-color);
+}
+.logo {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  height: auto;
+  padding-left: 90px;
+  float: left;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 1rem;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+#themeToggle {
+  background-color: transparent;
+  border: none;
+  color: var(--dark-text-color);
+  cursor: pointer;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* Hero Section Styles */
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  padding: 2rem;
+  max-width: 150px;
+}
+
+.hero-content {
+  position: relative;
+  justify-content: center;
+  margin-left: 100px;
+}
+
+.hero h2 {
+  src: url(https://fonts.google.com/specimen/Poppins);
+  font-size: 60px;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+.heroic {
+  margin-left: 400px;
+}
+.hero-img {
+  background: no-repeat;
+  background-size: contain;
+  width: 700px;
+  height: 100%;
+}
+
+.cta-buttons {
+  src: url(https://fonts.google.com/specimen/Poppins);
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  background-color: var(--secondary-color);
+  border: none;
+  color: var(--dark-text-color);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 4px;
+}
+
+.features {
+  src: url(https://fonts.google.com/specimen/Poppins);
+  display: flex;
+  justify-content: center;
+}
+
+.feature {
+  display: inline-flex;
+  align-items: center;
+  margin: 1rem 0 4rem;
+}
+
+.feature i {
+  margin-right: 0.5rem;
+}
+
+#getstarted {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+#getstarted:hover,
+#getstarted:focus,
+#getstarted:active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+#getstarted a {
+  color: var(--dark-text-color);
+  display: inline-block;
+  text-decoration: none;
+}
+
+#demobtn {
+  margin-top: 10px;
+}
+
+#demobtn a {
+  color: var(--secondary-color);
+  display: inline-block;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 10rem;
+  font-weight: bolder;
+  align-items: right;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-content {
+    margin-bottom: 2rem;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+  .heroic img {
+    margin-bottom: 2rem; /*! its not working to be fixed*/
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-btn {
+    margin: 0.5rem 0;
+  }
+
+  .features {
+    flex-direction: column;
+  }
+
+  .feature {
+    margin: 0.5rem 0;
+  }
+}
