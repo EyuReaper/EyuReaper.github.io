@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #4b0072, #007bff, #00bcd4);
+  background-size: 300% 300%;
+  animation: gradientAnimation 10s ease infinite;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+h2 {
+  margin: 10px 0;
+}
+
+p {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.profile-card {
+  background-color: #231e39;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.75);
+  padding: 30px;
+  text-align: center;
+  width: 370px;
+  height: 520px;
+  position: relative;
+  width: 90%;
+  max-width: 350px;
+  perspective: 1000px;
+  animation: slideIn 0.5s ease-out; /* sliding animation upon initialization of the page*/
+}
+
+/*slidein keyframe*/
+@keyframes slideIn {
+  from {
+      transform: translateY(100%); /* Start from below the viewport */
+      opacity: 0; /* Start invisible */
+  }
+  to {
+      transform: translateY(0); /* End at original position */
+      opacity: 1; /* Fully visible */
+  }
+}
+
+.profile-card .avail {
+  color: black;
+  background-color: palegreen;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 7px;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+
+.profile-card .profile-img {
+  border-radius: 50%;
+  border: 1px solid gold;
+  padding: 7px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-inner {
+  position: relative;
+  background-color: #231e39;
+  position: relative;
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.name {
+  margin: 10px 0 5px;
+  font-size: 1.5rem;
+  color: cyan;
+}
+
+.job-title {
+  color: greenyellow;
+  margin-bottom: 15px;
+}
+
+.contact-info {
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+
+.toggle-info {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.toggle-info:hover {
+  background-color: #0056b3;
+}
+
+.more-info {
+  display: none; /* Ensure this is hidden initially */
+  margin-top: 10px;
+  color: white;
+}
+
+.primary,
+.primary.ghost,
+.primary.flesh {
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  padding: 11px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.primary {
+  background-color: black;
+}
+
+.primary:hover {
+  background-color: #333;
+}
+
+.primary.ghost {
+  background-color: #0a66c2;
+}
+
+.primary.ghost:hover {
+  background-color: #005582;
+}
+
+.primary.flesh {
+  background-color: #24a1de;
+}
+
+.primary.flesh:hover {
+  background-color: #e6e6e6;
+}
+
+.github-logo,
+.linkedin-logo,
+.telegram-logo {
+  width: 35px;
+}
+
+footer {
+  background-color: #222;
+  color: #fff;
+  font-size: 14px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999;
+  width: 100%;
+}
+
+a {
+  color: yellow;
+}
+
+.skills {
+  background-color: #1f1a36;
+  text-align: left;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.skills ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills ul li {
+  border: 1px solid #2d2747;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 7px 7px 0;
+  padding: 7px;
+  font-weight: 300;
+}
+
+.uiux {
+  background-color: skyblue;
+  color: black;
+}
+
+.FED {
+  background-color: gold;
+  color: black;
+}
+
+.html {
+  background-color: #e34c26;
+  color: black;
+}
+
+.css {
+  background-color: #264de4;
+  color: black;
+}
+
+.js {
+  background-color: #f0db4f;
+  color: black;
+}
+
+.react {
+  background-color: #61dbfb;
+  color: black;
+}
+
+.node {
+  background-color: #3c873a;
+  color: black;
+}
+
+.buttons {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+  .profile-img {
+      width: 80px; 
+      height: 80px; 
+  }
+
+  .name {
+      font-size: 1.2em; 
+  }
+  .job-title {
+      font-size: 1em; 
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
